@@ -45,6 +45,14 @@ dependencies = [
 # openpaper = "app.main"
 start = "app:start"
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 [tool.mypy]
 plugins = [
     "sqlalchemy.ext.mypy.plugin",
